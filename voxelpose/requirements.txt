@@ -1,0 +1,14 @@
+torch==1.4.0
+torchvision==0.5.0
+tqdm==4.29.1
+json_tricks==3.13.2
+opencv_python==4.0.0.21
+prettytable==0.7.2
+scipy==1.4.1
+numpy==1.20.3
+matplotlib==3.4.3
+easydict==1.9
+PyYAML==5.4
+tensorboardX==2.1
+protobuf==3.20.1
+open3d==0.9.0.0

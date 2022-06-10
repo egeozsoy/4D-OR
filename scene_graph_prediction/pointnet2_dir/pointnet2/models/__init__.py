@@ -1,0 +1,4 @@
+from scene_graph_prediction.pointnet2_dir.pointnet2.models.pointnet2_msg_cls import PointNet2ClassificationMSG
+from scene_graph_prediction.pointnet2_dir.pointnet2.models.pointnet2_msg_sem import PointNet2SemSegMSG
+from scene_graph_prediction.pointnet2_dir.pointnet2.models.pointnet2_ssg_cls import PointNet2ClassificationSSG
+from scene_graph_prediction.pointnet2_dir.pointnet2.models.pointnet2_ssg_sem import PointNet2SemSegSSG

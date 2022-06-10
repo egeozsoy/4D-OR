@@ -1,0 +1,48 @@
+{
+  "MODEL": "SGPN",
+  "VERBOSE": true,
+  "MAX_EPOCHES": 25,
+  "LR": 0.00003,
+  "W_DECAY": 0.001,
+  "NUM_WORKERS": 12,
+  "USE_GT": false,
+  "IMAGE_INPUT": false,
+  "EDGE_BUILD_TYPE": "KNN",
+  "WEIGHTING": true,
+  "MODEL": {
+    "N_LAYERS": 2,
+    "USE_SPATIAL": true,
+    "WITH_BN": false,
+    "USE_GCN": true,
+    "USE_GCN_EDGE": true,
+    "USE_REL_LOSS": true,
+    "OBJ_PRED_FROM_GCN": true,
+    "INPUT_DROPOUT": 0.0,
+    "GCN_TYPE": "TRIP",
+    "point_feature_size": 256,
+    "edge_feature_size": 256,
+    "gcn_hidden_feature_size": 512,
+    "lambda_o": 0.000001,
+    "NUM_HEADS": 4,
+    "GCN_AGGR": "max",
+    "DIM_ATTEN": 256,
+    "WEIGHT_EDGE": "DYNAMIC",
+    "w_bg": 1.0,
+    "NONE_RATIO": 1.0,
+    "FULL_IMAGE_EMBEDDING_SIZE": 768,
+    "IMAGE_MODEL": false
+  },
+  "dataset": {
+    "root": [
+      "scene_graph_prediction/data/OR_4D_data"
+    ],
+    "data_augmentation": true,
+    "num_points_objects": 4000,
+    "num_points_relation": 8000,
+    "num_points_scene": 10000,
+    "image_res": 0,
+    "class_choice": [],
+    "max_edges": -1,
+    "DATASET_SUFFIX": ""
+  }
+}
