@@ -9,7 +9,7 @@ import torch
 from scipy.spatial.distance import cdist
 from tqdm.contrib.concurrent import process_map  # or thread_map
 
-from group_free_3D.pointnet2.pointnet2_utils import furthest_point_sample
+from external_src.group_free_3D.pointnet2.pointnet2_utils import furthest_point_sample
 from helpers.configurations import OBJECT_POSES_PATH, INSTANCE_LABELS_PATH, INSTANCE_LABELS_PRED_PATH, OBJECT_LABEL_MAP, \
     LIMBS, IDX_TO_BODY_PART, POSE_PREDICTION_PATH, GROUP_FREE_PREDICTIONS_PATH, STATIONARY_OBJECTS
 from helpers.human_pose_utils import human_pose_to_joints

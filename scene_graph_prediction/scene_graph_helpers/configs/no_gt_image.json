@@ -34,7 +34,7 @@
   },
   "dataset": {
     "root": [
-      "scene_graph_prediction/data/OR_4D_data"
+      "data/OR_4D_data"
     ],
     "data_augmentation": true,
     "num_points_objects": 4000,

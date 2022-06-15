@@ -4,7 +4,7 @@ experiments/
 *.egg-info
 logs
 3DSSG_subset
-./data
+../data
 *.ini
 *.ply
 results/

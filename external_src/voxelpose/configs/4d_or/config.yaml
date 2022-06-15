@@ -1,0 +1,84 @@
+CUDNN:
+  BENCHMARK: true
+  DETERMINISTIC: false
+  ENABLED: true
+BACKBONE_MODEL: ''
+MODEL: 'multi_person_posenet'
+DATA_DIR: ''
+GPUS: '0'
+OUTPUT_DIR: 'output'
+LOG_DIR: 'log'
+WORKERS: 4
+PRINT_FREQ: 500
+
+DATASET:
+  COLOR_RGB: True
+  TRAIN_DATASET: 'OR_4D'
+  TEST_DATASET: 'OR_4D'
+  DATA_FORMAT: jpg
+  DATA_AUGMENTATION: False
+  FLIP: False
+  ROOT: 'data/Shelf' # 'data/panoptic/'
+  ROT_FACTOR: 45
+  SCALE_FACTOR: 0.35
+  TEST_SUBSET: 'val'
+  TRAIN_SUBSET: 'train'
+  ROOTIDX:
+    - 5 # Right hip
+    - 4 # left hip
+  CAMERA_NUM: 6
+NETWORK:
+  PRETRAINED_BACKBONE: ''
+  PRETRAINED: ''
+  TARGET_TYPE: gaussian
+  IMAGE_SIZE:
+    - 2048
+    - 1536
+  HEATMAP_SIZE:
+    - 200
+    - 152
+  SIGMA: 3
+  NUM_JOINTS: 14
+  USE_GT: False
+LOSS:
+  USE_TARGET_WEIGHT: true
+  PATIENT_WEIGHT: 4
+TRAIN:
+  BATCH_SIZE: 1
+  SHUFFLE: true
+  BEGIN_EPOCH: 0
+  END_EPOCH: 20
+  RESUME: true
+  OPTIMIZER: adam
+  LR: 0.0001
+TEST:
+  MODEL_FILE: "model_best.pth.tar"
+  BATCH_SIZE: 1
+DEBUG:
+  DEBUG: true
+  SAVE_HEATMAPS_GT: true
+  SAVE_HEATMAPS_PRED: true
+MULTI_PERSON:
+  SPACE_SIZE:
+    - 8000.0
+    - 8000.0
+    - 8000.0
+  SPACE_CENTER:
+    - 296.1
+    - 826.0
+    - -190.4
+  INITIAL_CUBE_SIZE:
+    - 80
+    - 80
+    - 80
+  MAX_PEOPLE_NUM: 10
+  THRESHOLD: 0.1
+PICT_STRUCT:
+  GRID_SIZE:
+    - 2000.0
+    - 2000.0
+    - 2000.0
+  CUBE_SIZE:
+    - 56
+    - 56
+    - 56
