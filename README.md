@@ -6,6 +6,7 @@ We publish both a new dataset, 4D-OR and our code.
 <img src="figures/4d_or.jpg" alt="4d_or" width="75%"/>
 
 **Authors**: [Ege Özsoy][eo], [Evin Pınar Örnek][epo], [Ulrich Eck][ue], [Tobias Czempiel][tc],[Federico Tombari][fede], [Nassir Navab][nassir]
+
 [eo]:https://www.cs.cit.tum.de/camp/members/ege-oezsoy/
 [epo]:https://www.cs.cit.tum.de/camp/members/evin-pinar-oernek/
 [ue]:https://www.cs.cit.tum.de/camp/members/ulrich-eck/
