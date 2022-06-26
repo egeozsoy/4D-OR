@@ -5,7 +5,7 @@ We publish both a new dataset, 4D-OR and our code.
 
 <img src="figures/4d_or.jpg" alt="4d_or" width="75%"/>
 
-**Authors**: [Ege Özsoy][eo], [Evin Pınar Örnek][epo], [Ulrich Eck][ue], [Tobias Czempiel][tc],[Federico Tombari][fede], [Nassir Navab][nassir]
+**Authors**: [Ege Özsoy][eo], [Evin Pınar Örnek][epo], [Ulrich Eck][ue], [Tobias Czempiel][tc], [Federico Tombari][fede], [Nassir Navab][nassir]
 
 [eo]:https://www.cs.cit.tum.de/camp/members/ege-oezsoy/
 [epo]:https://www.cs.cit.tum.de/camp/members/evin-pinar-oernek/
@@ -22,9 +22,9 @@ We publish both a new dataset, 4D-OR and our code.
     year={2022},
     organization={Springer}
 }
-@inproceedings{Özsoy2021MSSG,
+@inproceedings{Özsoy2021_MSSG,
     title={Multimodal Semantic Scene Graphs for Holistic Modeling of Surgical
-               Procedures},
+           Procedures},
     author={Ege Özsoy, Evin Pınar Örnek, Ulrich Eck, Federico Tombari, Nassir Navab},
     booktitle={Arxiv},
     year = {2021}
