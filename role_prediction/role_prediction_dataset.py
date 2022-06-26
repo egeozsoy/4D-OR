@@ -20,12 +20,12 @@ def load_gt_scene_graphs_in_prediction_format():
     all_scan_relations = {}
     for take_idx in TAKE_SPLIT['train'] + TAKE_SPLIT['val'] + TAKE_SPLIT['test']:
         if take_idx in TAKE_SPLIT['train']:
-            gt_rels_path = Path('scene_graph_prediction/data/OR_4D_data/relationships_train.json')
+            gt_rels_path = Path('data/OR_4D_data/relationships_train.json')
         elif take_idx in TAKE_SPLIT['val']:
-            gt_rels_path = Path('scene_graph_prediction/data/OR_4D_data/relationships_validation.json')
+            gt_rels_path = Path('data/OR_4D_data/relationships_validation.json')
         elif take_idx in TAKE_SPLIT['test']:
             gt_rels_path = Path(
-                'scene_graph_prediction/data/OR_4D_data/relationships_test_dummy.json')  # TODO if you have access to relationships_test.json, you can use that instead
+                'data/OR_4D_data/relationships_test_dummy.json')  # TODO if you have access to relationships_test.json, you can use that instead
         else:
             raise Exception()
         with open(gt_rels_path) as f:
@@ -58,12 +58,12 @@ def load_gt_role_labels(take_indices):
         root_path = OR_4D_DATA_ROOT_PATH / 'human_name_to_3D_joints'
         GT_take_human_name_to_3D_joints = np.load(str(root_path / f'{take_idx}_GT_True.npz'), allow_pickle=True)['arr_0'].item()
         if take_idx in TAKE_SPLIT['train']:
-            gt_rels_path = Path('scene_graph_prediction/data/OR_4D_data/relationships_train.json')
+            gt_rels_path = Path('data/OR_4D_data/relationships_train.json')
         elif take_idx in TAKE_SPLIT['val']:
-            gt_rels_path = Path('scene_graph_prediction/data/OR_4D_data/relationships_validation.json')
+            gt_rels_path = Path('data/OR_4D_data/relationships_validation.json')
         elif take_idx in TAKE_SPLIT['test']:
             gt_rels_path = Path(
-                'scene_graph_prediction/data/OR_4D_data/relationships_test_dummy.json')  # TODO if you have access to relationships_test.json, you can use that instead
+                'data/OR_4D_data/relationships_test_dummy.json')  # TODO if you have access to relationships_test.json, you can use that instead
         else:
             raise Exception()
         with open(gt_rels_path) as f:

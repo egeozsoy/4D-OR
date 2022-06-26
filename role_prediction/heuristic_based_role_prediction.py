@@ -150,18 +150,18 @@ def check_rels(rels, role_guesses):
 def get_rels_path(take_idx, USE_GT, USE_IMAGES):
     if take_idx in TAKE_SPLIT['train']:
         if USE_GT:
-            return Path('scene_graph_prediction/data/OR_4D_data/relationships_train.json')
+            return Path('data/OR_4D_data/relationships_train.json')
         else:
             return Path('scan_relations_training_no_gt_train_scans.json') if not USE_IMAGES else Path('scan_relations_training_no_gt_images_train_scans.json')
     elif take_idx in TAKE_SPLIT['val']:
         if USE_GT:
-            return Path('scene_graph_prediction/data/OR_4D_data/relationships_validation.json')
+            return Path('data/OR_4D_data/relationships_validation.json')
         else:
             return Path('scan_relations_training_no_gt_validation_scans.json') if not USE_IMAGES else Path(
                 'scan_relations_training_no_gt_images_validation_scans.json')
     elif take_idx in TAKE_SPLIT['test']:
         if USE_GT:
-            return Path('scene_graph_prediction/data/OR_4D_data/relationships_test_dummy.json')
+            return Path('data/OR_4D_data/relationships_test_dummy.json')
         else:
             return Path('scan_relations_training_no_gt_test_scans.json') if not USE_IMAGES else Path('scan_relations_training_no_gt_images_test_scans.json')
 
@@ -324,7 +324,11 @@ def main():
 
     for take_idx in TAKE_SPLIT['train'] + TAKE_SPLIT['val'] + TAKE_SPLIT['test']:
         root_path = OR_4D_DATA_ROOT_PATH / 'human_name_to_3D_joints'
-        GT_take_human_name_to_3D_joints = np.load(str(root_path / f'{take_idx}_GT_True.npz'), allow_pickle=True)['arr_0'].item()
+        try:
+            GT_take_human_name_to_3D_joints = np.load(str(root_path / f'{take_idx}_GT_True.npz'), allow_pickle=True)['arr_0'].item()
+        except FileNotFoundError:
+            print(f'{root_path / f"{take_idx}_GT_True.npz"} not found')
+            continue
         all_gt_labels = []
         all_pred_labels = []
         with open(f'datasets/4D-OR/human_name_to_3D_joints/{take_idx}_scene_graph_track_GT_{USE_GT_SCENE_GRAPHS}.pickle', 'rb') as f:
