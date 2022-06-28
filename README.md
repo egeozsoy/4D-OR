@@ -23,11 +23,10 @@ We publish both a new dataset, 4D-OR and our code.
     organization={Springer}
 }
 @inproceedings{Özsoy2021_MSSG,
-    title={Multimodal Semantic Scene Graphs for Holistic Modeling of Surgical
-           Procedures},
+    title={Multimodal Semantic Scene Graphs for Holistic Modeling of Surgical Procedures},
     author={Ege Özsoy, Evin Pınar Örnek, Ulrich Eck, Federico Tombari, Nassir Navab},
     booktitle={Arxiv},
-    year = {2021}
+    year={2021}
 }
 ```
 
@@ -59,7 +58,6 @@ Please refer to README in external_src. The rest assumes you have completed the 
 - (Optional) To use the pretrained models, Move `paper_model_no_gt_no_images.pth` and `paper_model_no_gt_with_images.pth.pth`
   to `scene_graph_prediction/scene_graph_helpers/paper_weights`
 - `cd` into pointnet2_dir and run `CUDA_HOME=/usr/local/cuda-11.3 pip install pointnet2_ops_lib/.`
--
 Run `pip install torch-scatter==2.0.9 torch-sparse==0.6.12 torch-cluster==1.5.9 torch-spline-conv==1.2.1 torch-geometric==2.0.2 -f https://data.pyg.org/whl/torch-1.10.0+cu113.html`
 
 ## Instance Label Computation (Project Human and Object Pose Detections to Point Cloud)
