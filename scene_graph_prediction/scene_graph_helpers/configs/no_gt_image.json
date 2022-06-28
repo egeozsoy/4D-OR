@@ -34,7 +34,7 @@
   },
   "dataset": {
     "root": [
-      "data/OR_4D_data"
+      "data"
     ],
     "data_augmentation": true,
     "num_points_objects": 4000,

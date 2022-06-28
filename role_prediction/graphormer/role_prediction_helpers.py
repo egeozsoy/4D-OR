@@ -17,12 +17,12 @@ from role_prediction.graphormer.role_prediction_configs import USE_GT, USE_IMAGE
 def get_rels_path(take_idx, USE_GT, USE_IMAGES):
     if take_idx in TAKE_SPLIT['train']:
         if USE_GT:
-            return Path('data/OR_4D_data/relationships_train.json')
+            return Path('data/relationships_train.json')
         else:
             return Path(f'scan_relations_training_no_gt_train_scans.json') if not USE_IMAGES else Path(f'scan_relations_training_no_gt_images_train_scans.json')
     elif take_idx in TAKE_SPLIT['val']:
         if USE_GT:
-            return Path('data/OR_4D_data/relationships_validation.json')
+            return Path('data/relationships_validation.json')
         else:
             return Path(
                 f'scan_relations_training_no_gt_validation_scans.json') if not USE_IMAGES else Path(
@@ -30,7 +30,7 @@ def get_rels_path(take_idx, USE_GT, USE_IMAGES):
     elif take_idx in TAKE_SPLIT['test']:
         if USE_GT:
             return Path(
-                'data/OR_4D_data/relationships_test_dummy.json')  # TODO if you have access to relationships_test.json, you can use that instead
+                'data/relationships_test_dummy.json')  # TODO if you have access to relationships_test.json, you can use that instead
         else:
             return Path(f'scan_relations_training_no_gt_test_scans.json') if not USE_IMAGES else Path(f'scan_relations_training_no_gt_images_test_scans.json')
 
