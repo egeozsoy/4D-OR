@@ -1,5 +1,5 @@
 # 4D-OR: Semantic Scene Graphs for OR Domain Modeling
-Official code of the paper 4D-OR: Semantic Scene Graphs for OR Domain Modeling (https://arxiv.org/abs/2203.11937) accepted at MICCAI 2022.
+Official code of the paper 4D-OR: Semantic Scene Graphs for OR Domain Modeling (https://link.springer.com/chapter/10.1007/978-3-031-16449-1_45) published at MICCAI 2022.
 We publish both a new dataset, 4D-OR and our code.
 
 <img src="figures/4d_or.jpg" alt="4d_or" width="75%"/>
