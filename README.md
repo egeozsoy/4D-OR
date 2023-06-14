@@ -77,7 +77,7 @@ We use https://github.com/ShunChengWu/3DSSG as a starting point for our scene gr
 
 - `cd` into scene_graph_prediction
 - To train a new model using only point cloud, run `python -m scene_graph_prediction.main --config no_gt.json`
-- To train a new model using only point cloud, run `python -m scene_graph_prediction.main --config no_gt_image.json`
+- To train a new model using point clouds and images, run `python -m scene_graph_prediction.main --config no_gt_image.json`
 - To evaluate either a model you trained or a pretrained model from us, change the mode to `evaluate` and rerun using the same command as before
   - If you want to replicate the results from the paper, we provide two weights, in the folder scene_graph_prediction/scene_graph_helpers/paper_weights. Just
     change the variable paper_weight = None to the corresponding path
