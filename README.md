@@ -30,7 +30,12 @@ We publish both a new dataset, 4D-OR and our code.
     booktitle={Arxiv},
     year={2021}
 }
+
 ```
+
+### LABRAD-OR (https://github.com/egeozsoy/LABRAD-OR) achieves significantly higher results, by using temporal information in form of memory scene graphs.
+
+
 
 ## 4D-OR Dataset
 
