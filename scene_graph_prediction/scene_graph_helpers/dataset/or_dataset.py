@@ -80,12 +80,15 @@ class ORDataset(Dataset):
         scan_id = self.scans[index]
         scan_id_no_split = scan_id.rsplit('_', 1)[0]
         take_idx = scan_id.split('_')[0]
-        if take_idx in self.take_idx_to_human_name_to_3D_joints:
-            human_name_to_3D_joints = self.take_idx_to_human_name_to_3D_joints[take_idx]
+        if self.split != 'test':
+            if take_idx in self.take_idx_to_human_name_to_3D_joints:
+                human_name_to_3D_joints = self.take_idx_to_human_name_to_3D_joints[take_idx]
+            else:
+                human_name_to_3D_joints = np.load(str(OR_4D_DATA_ROOT_PATH / 'human_name_to_3D_joints' / f'{take_idx}_GT_True.npz'), allow_pickle=True)[
+                    'arr_0'].item()
+                self.take_idx_to_human_name_to_3D_joints[take_idx] = human_name_to_3D_joints
         else:
-            human_name_to_3D_joints = np.load(str(OR_4D_DATA_ROOT_PATH / 'human_name_to_3D_joints' / f'{take_idx}_GT_True.npz'), allow_pickle=True)[
-                'arr_0'].item()
-            self.take_idx_to_human_name_to_3D_joints[take_idx] = human_name_to_3D_joints
+            human_name_to_3D_joints = None
         selected_instances = list(self.objs_json[scan_id].keys())
         map_instance2labelName = self.objs_json[scan_id]
         cache_path = self.caching_folder / f'{scan_id}.npz'

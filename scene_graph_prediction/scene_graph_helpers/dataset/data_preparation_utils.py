@@ -216,7 +216,7 @@ def data_preparation(config, points, instances, selected_instances, num_points, 
         pointset = torch.from_numpy(pointset.astype(np.float32))
         pointset[:, :3], info = zero_mean(pointset[:, :3])
         rel_points.append(pointset)
-        if obj1_instance in instance_label_to_hand_locations:
+        if instance_label_to_hand_locations is not None and obj1_instance in instance_label_to_hand_locations:
             hand_points = torch.from_numpy(instance_label_to_hand_locations[obj1_instance]).clone()
             hand_points -= info['mean']
             hand_points /= info['dist']
