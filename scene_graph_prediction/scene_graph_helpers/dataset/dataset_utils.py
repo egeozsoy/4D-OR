@@ -85,7 +85,7 @@ def load_mesh(scan_id_no_split, scan_id, objs_json, USE_GT=False, for_infer=Fals
         if np.sum(instance_labels == instance_label_idx) == 0 and value not in ['instrument']:
             not_found_objects[key] = value
         modified_instance_labels[instance_labels == instance_label_idx] = key
-        if value in human_name_to_3D_joints[pcd_idx]:
+        if human_name_to_3D_joints is not None and value in human_name_to_3D_joints[pcd_idx]:
             instance_label_to_hand_locations[key] = human_name_to_3D_joints[pcd_idx][value][8:10]
 
     result['points'] = np.concatenate([np.asarray(pcd.points), np.asarray(pcd.colors)], axis=1)
