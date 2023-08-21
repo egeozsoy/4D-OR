@@ -3,7 +3,7 @@ Official code of the paper 4D-OR: Semantic Scene Graphs for OR Domain Modeling (
 
 PDF Paper: https://link.springer.com/content/pdf/10.1007/978-3-031-16449-1_45.pdf?pdf=inline%20link  
 PDF Book: https://link.springer.com/content/pdf/10.1007/978-3-031-16449-1.pdf?pdf=button%20sticky  
-Oral Presentation at MICCAI22: https://youtu.be/U_VUr-IPIPE
+Oral Presentation at MICCAI22: https://youtu.be/U_VUr-IPIPE  
 We publish both a new dataset, 4D-OR and our code.
 
 <img src="figures/4d_or.jpg" alt="4d_or" width="75%"/>
