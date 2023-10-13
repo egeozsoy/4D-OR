@@ -1,0 +1,34 @@
+{
+  "sterile": [
+    0,
+    52
+  ],
+  "roll_in": [
+    53,
+    146
+  ],
+  "patient_prep": [
+    147,
+    304
+  ],
+  "knee_prep": [
+    305,
+    402
+  ],
+  "knee_insert": [
+    403,
+    503
+  ],
+  "surgery_conclusion": [
+    504,
+    569
+  ],
+  "roll_out": [
+    570,
+    591
+  ],
+  "cleanup": [
+    592,
+    627
+  ]
+}

@@ -32,6 +32,7 @@ We publish both a new dataset, 4D-OR and our code.
 }
 
 ```
+### In the extended version of our paper, which is published at IJCARS () we add a secondary downstream task, which is surgery phase recognition, where we get excellent results. We update this repository to include the new surgical phase labels as well as the code to predict them.
 
 ### LABRAD-OR (https://github.com/egeozsoy/LABRAD-OR) achieves significantly higher results, by using temporal information in form of memory scene graphs.
 
@@ -103,3 +104,8 @@ We use https://github.com/ShunChengWu/3DSSG as a starting point for our scene gr
   role_prediction_configs `python -m role_prediction.graphormer.entry --num_workers 12 --batch_size 1 --dataset_name role_prediction --gpus 1 --accelerator ddp --precision 16 --ffn_dim 80 --hidden_dim 80 --num_heads 8 --dropout_rate 0.1 --attention_dropout_rate 0.1 --intput_dropout_rate 0.1 --n_layers 12 --peak_lr 2e-4 --edge_type multi_hop --multi_hop_max_dist 5 --spatial_pos_max 16 --check_val_every_n_epoch 10 --warmup_updates 40000 --tot_updates 400000 --default_root_dir role_prediction_save_dir_images`
 - Run the following to infer using Graphormer for the test set. If you want to predict for train or validation sets, manually change the variable in
   data.py. `python -m role_prediction.graphormer.entry --num_workers 12 --batch_size 1 --dataset_name role_prediction --gpus 1 --accelerator ddp --precision 16 --ffn_dim 80 --hidden_dim 80 --num_heads 8 --dropout_rate 0.1 --attention_dropout_rate 0.1 --intput_dropout_rate 0.1 --n_layers 12 --peak_lr 2e-4 --edge_type multi_hop --multi_hop_max_dist 5 --spatial_pos_max 16 --check_val_every_n_epoch 10 --default_root_dir save_dir --checkpoint_path role_prediction_save_dir_images/lightning_logs/checkpoints/role_prediction-epoch=199-valid_ap=0.0000.ckpt --test --role_prediction_save_name graphormer_based_role_predictions.json`
+
+## Case Study: Surgery Phase Recognition
+
+- Run `python -m surgery_phase_recognition.recognize_surgery_phase` to predict surgery phases from scene graphs
+- Run `python -m surgery_phase_recognition.evaluate_surgery_phase_recognition` to evaluate the results.
