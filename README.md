@@ -18,6 +18,19 @@ We publish both a new dataset, 4D-OR and our code.
 [nassir]:https://www.cs.cit.tum.de/camp/members/cv-nassir-navab/nassir-navab/
 
 ```
+@Article{Özsoy2023,
+author={{\"O}zsoy, Ege
+and Czempiel, Tobias
+and {\"O}rnek, Evin P{\i}nar
+and Eck, Ulrich
+and Tombari, Federico
+and Navab, Nassir},
+title={Holistic OR domain modeling: a semantic scene graph approach},
+journal={International Journal of Computer Assisted Radiology and Surgery},
+year={2023},
+doi={10.1007/s11548-023-03022-w},
+url={https://doi.org/10.1007/s11548-023-03022-w}
+}
 @inproceedings{Özsoy2022_4D_OR,
     title={4D-OR: Semantic Scene Graphs for OR Domain Modeling},
     author={Ege Özsoy, Evin Pınar Örnek, Ulrich Eck, Tobias Czempiel, Federico Tombari, Nassir Navab},
