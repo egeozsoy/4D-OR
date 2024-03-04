@@ -31,6 +31,14 @@ year={2023},
 doi={10.1007/s11548-023-03022-w},
 url={https://doi.org/10.1007/s11548-023-03022-w}
 }
+@article{ozsoy2023holistic,
+  title={Holistic OR domain modeling: a semantic scene graph approach},
+  author={{\"O}zsoy, Ege and Czempiel, Tobias and {\"O}rnek, Evin P{\i}nar and Eck, Ulrich and Tombari, Federico and Navab, Nassir},
+  journal={International Journal of Computer Assisted Radiology and Surgery},
+  pages={1--9},
+  year={2023},
+  publisher={Springer}
+}
 @inproceedings{Özsoy2022_4D_OR,
     title={4D-OR: Semantic Scene Graphs for OR Domain Modeling},
     author={Ege Özsoy, Evin Pınar Örnek, Ulrich Eck, Tobias Czempiel, Federico Tombari, Nassir Navab},
