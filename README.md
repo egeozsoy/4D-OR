@@ -50,6 +50,8 @@ url={https://doi.org/10.1007/s11548-023-03022-w}
 
 ### LABRAD-OR (https://github.com/egeozsoy/LABRAD-OR) achieves significantly higher results, by using temporal information in form of memory scene graphs.
 
+### ORacle (https://github.com/egeozsoy/ORacle) proposes a new end-to-end LVLM based approach, which at the same time simplies the existing approaches, relaxes some requirements, reaches SOTA results and allows inference time adaptation without retraining by leveraging visual or textual prompts.
+
 
 
 ## 4D-OR Dataset
