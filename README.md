@@ -46,6 +46,8 @@ url={https://doi.org/10.1007/s11548-023-03022-w}
 }
 
 ```
+### Our most recent work and dataset, MM-OR, got accepted at CVPR 2025. We fully open source it at https://github.com/egeozsoy/MM-OR. MM-OR has significantly more timepoints, videos, realism and overall is a much more challenging dataset. We believe it will push the community even further.
+### We now have panoptic segmentation annotations from 3 angles for all the 4D-OR recordings. Download them at https://huggingface.co/egeozsoy/MM-OR/resolve/main/4D-OR_panoptic_segmentations.zip?download=true. Place them individually to the corresponding folders. Details on processing them are in our new repository https://github.com/egeozsoy/MM-OR.
 ### In the extended version of our paper, which is published at IJCARS (https://link.springer.com/article/10.1007/s11548-023-03022-w) we add a secondary downstream task, which is surgery phase recognition, where we get excellent results. We update this repository to include the new surgical phase labels as well as the code to predict them.
 
 ### LABRAD-OR (https://github.com/egeozsoy/LABRAD-OR) achieves significantly higher results, by using temporal information in form of memory scene graphs.
