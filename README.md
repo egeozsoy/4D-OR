@@ -18,6 +18,19 @@ We publish both a new dataset, 4D-OR and our code.
 [nassir]:https://www.cs.cit.tum.de/camp/members/cv-nassir-navab/nassir-navab/
 
 ```
+@Article{Özsoy2023,
+author={{\"O}zsoy, Ege
+and Czempiel, Tobias
+and {\"O}rnek, Evin P{\i}nar
+and Eck, Ulrich
+and Tombari, Federico
+and Navab, Nassir},
+title={Holistic OR domain modeling: a semantic scene graph approach},
+journal={International Journal of Computer Assisted Radiology and Surgery},
+year={2023},
+doi={10.1007/s11548-023-03022-w},
+url={https://doi.org/10.1007/s11548-023-03022-w}
+}
 @inproceedings{Özsoy2022_4D_OR,
     title={4D-OR: Semantic Scene Graphs for OR Domain Modeling},
     author={Ege Özsoy, Evin Pınar Örnek, Ulrich Eck, Tobias Czempiel, Federico Tombari, Nassir Navab},
@@ -33,9 +46,13 @@ We publish both a new dataset, 4D-OR and our code.
 }
 
 ```
-### In the extended version of our paper, which is published at IJCARS () we add a secondary downstream task, which is surgery phase recognition, where we get excellent results. We update this repository to include the new surgical phase labels as well as the code to predict them.
+### Our most recent work and dataset, MM-OR, got accepted at CVPR 2025. We fully open source it at https://github.com/egeozsoy/MM-OR. MM-OR has significantly more timepoints, videos, realism and overall is a much more challenging dataset. We believe it will push the community even further.
+### We now have panoptic segmentation annotations from 3 angles for all the 4D-OR recordings. Download them at https://huggingface.co/egeozsoy/MM-OR/resolve/main/4D-OR_panoptic_segmentations.zip?download=true. Place them individually to the corresponding folders. Details on processing them are in our new repository https://github.com/egeozsoy/MM-OR.
+### In the extended version of our paper, which is published at IJCARS (https://link.springer.com/article/10.1007/s11548-023-03022-w) we add a secondary downstream task, which is surgery phase recognition, where we get excellent results. We update this repository to include the new surgical phase labels as well as the code to predict them.
 
 ### LABRAD-OR (https://github.com/egeozsoy/LABRAD-OR) achieves significantly higher results, by using temporal information in form of memory scene graphs.
+
+### ORacle (https://github.com/egeozsoy/ORacle) proposes a new end-to-end LVLM based approach, which at the same time simplies the existing approaches, relaxes some requirements, reaches SOTA results and allows inference time adaptation without retraining by leveraging visual or textual prompts.
 
 
 
